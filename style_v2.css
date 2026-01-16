@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "Avara-Bold";
+    src: url("fonts/Avara-Bold.woff2") format("woff2");
+
+}
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+body{
+    background-color:black;
+    font-family: "Avara-Bold", serif;
+    font-size: 20px;
+}
+
+
+
+.grid-container {
+    display: grid;
+    padding: 3px 3px 3px 3px;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+     "name name name name"
+     "bio bio bio bio"
+     "image-1 image-1 . text-1"
+     "image-2 image-2 . ."
+     "image-3 image-3 . text-3"
+     "image-3 image-3 . text-3"
+}
+
+h1 {
+    color: green;
+}
+
+.name {
+    grid-area: name;
+}
+
+.name h1 {
+    color:dimgrey;
+    font-family:sans-serif;
+    font-weight: normal;
+    font-size: 11rem;
+    margin: 0;
+}
+
+.name h1:hover{
+    color:aqua;
+    font-family: "fantasy";
+    font-weight: bold;
+}
+
+.bio {
+    grid-area: bio;
+    font-family:fantasy;
+}
+
+.bio p {
+    color:white;
+    font-size: 24px;
+    line-height: 3.25;
+    margin: 0;
+    
+}
+
+
+.image-1{
+    grid-area: image-1;
+    max-width: 40%;
+}
+    
+    
+
+.image-2{
+    grid-area: image-2;
+}
+
+.image-3{
+    grid-area: image-3; 
+}
+
+.text-1{
+    grid-area: text-1;
+    color:gray;
+}
+
+.text-2{
+    grid-area: text-2;
+    color:gray;
+}
+
+.text-3{
+    grid-area: text-3;
+}

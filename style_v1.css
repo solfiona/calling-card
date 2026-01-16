@@ -6,14 +6,13 @@ img{
 
 .grid-container {
     display: grid;
-    padding: 15px 15px 15px 15px;
-    gap: 15px;
-    grid-template-columns: 1fr 1 fr 1fr 1fr;
+    padding: 3px 3px 3px 3px;
+    gap: 5px;
+    grid-template-columns: 1fr 5fr 1fr 8fr;
     grid-template-areas: 
      "name name name bio"
-     "image-1 image-1 image-1 text-1"
-     "image-2 image-2 image-2 text-2"
-     "image-3 image-3 image-3 text-3";
+     "image-1 image-1 . image-3"
+     "image-2 image-2 image-2 image-2  ";
 
 }
 
@@ -21,8 +20,31 @@ img{
     grid-area: name;
 }
 
+.name h1 {
+    color: red;
+    font-family:sans-serif;
+    font-weight: normal;
+    font-size: 100px;
+    margin: 0;
+}
+
+.name h1:hover{
+    color: blue;
+    font-style: italic;
+    font-weight: bold;
+    
+}
+
 .bio {
     grid-area: bio;
+}
+
+.bio p {
+    color:darkorchid;
+    font-size: 24px;
+    line-height: 3.25;
+    margin: 0;
+    
 }
 
 .image-1{
