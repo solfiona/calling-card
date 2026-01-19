@@ -6,27 +6,95 @@ img{
 
 body {
     background-color:black;
+    margin: 0;
+    padding: 20px 10px 10px 20px;
+    font-family: Sawarabi Gothic, sans-serif;
+}
+
+
+p{
+    animation-duration: 3s;
+    animation-name: slide-in;
+}
+@keyframes slide-in{
+    from{
+        translate: 150vw 0;
+        scale: 200% 1;
+    }
+    
+    to {
+        translate: 0 0;
+        scale: 100% 1;
+    }
 }
 
 
 .grid-container {
         display: grid;
-        padding: 20px 10px 10px 20px;
-        gap: 20px;
+        padding: 10px 10px 10px 10px;
+        gap: 11px;
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
-         "name name name name"
-         "name name name name"
-         "name name name name"
-         "bio bio bio bio"
-         "image-1 image-1 image-2 image-4"
-         "image-3 image-3 image-2 image-4";
- 
+         "klein-1 . klein-2 . klein-3"
+         ". name name name . "
+         ". bio bio bio ."
+         "titel-1 . titel-2 . titel-3"
+         "illu . typo . paris"
+         "titel-11 titel-11 titel-11 titel-11 titel-11"
+         "image-11 image-11 image-11 image-2 image-2"
+         "image-4 . image-3 . image-5"
+         "titel-22 titel-22 titel-22 titel-22 titel-22"
+         "titel-33 titel-33 titel-33 titel-33 titel-33"
+         
+         
+         
+}
+
+
+.klein-1{
+    grid-area: klein-1;
+    color: rgb(50, 48, 48);
+    font-size: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+    padding-left: 30px;
+}
+.klein-1:hover{
+    color: white;
+    transition: color 0.5s ease;
+}
+
+
+
+.klein-2{
+    grid-area: klein-2;
+    color: rgb(50, 48, 48);
+    font-size: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.klein-2:hover{
+    color: white;
+    transition: color 0.5s ease;
+}
+
+
+.klein-3{
+    grid-area: klein-3;
+    color: rgb(50, 48, 48);
+    font-size: 8px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.klein-3:hover{
+    color: white;
+    transition: color 0.5s ease;
 }
 
 .name {
     grid-area: name;
     color: white;
+    text-align: center;
+
+    
 }
 
  .name h1 {
@@ -34,37 +102,147 @@ body {
     font-family:sans-serif;
     font-weight: normal;
     font-size: 100px;
-    margin: 0;
-} 
+    margin-bottom: 80px;
+}  
 
-/* .name h1:hover{
-    color: blue;
-    font-style: italic;
-    font-weight: bold;
-    transition: color 1.9s ease;
-} */
+
+
 
 .bio {
     grid-area: bio;
     color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+    margin-bottom: 100px;
+    text-align: center;
 }
 
-.image-1{
-    grid-area: image-1;
-    max-width: 25%;
-    rotate: -90deg;
+.titel-1{
+    grid-area: titel-1;
+    color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titel-11{
+    grid-area: titel-11;
+    color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+    padding-left: 20px;
+}
+
+.titel-2{
+    grid-area: titel-2;
+    color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.titel-22{
+    grid-area: titel-22;
+    color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+}
+
+.titel-3{
+    grid-area: titel-3;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-right: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titel-33{
+    grid-area: titel-33;
+    color: white;
+    font-family: Arial, Helvetica, 'Times New Roman', serif;
+}
+
+
+.image-11{
+    grid-area: image-11;
+    width: 100%;
+    max-width: 500px;
+    padding: 70px;
+    justify-self: center;
+    align-self: center; 
+    rotate: -155deg;
+}
+
+.image-11:hover{
+    transform: scale(1.55);
+    transition: transform 0.5s ease;  
 }
 .image-2{
     grid-area: image-2;
-    max-width: 25%;
+    max-width: 100%;
+    padding: 25px 25px 25px 25px; 
+  
 }
 .image-3{
     grid-area: image-3;
-    max-width: 25%;
+    max-width: 80%;
 }
 .image-4{
     grid-area: image-4;
-    max-width: 25%;
+    max-width: 80%;
+    justify-self: center;
+    align-self: start;
+
 }
 
+.image-4 img{
+    transition: opacity 0.3s ease;
+}
+.image-4 .b{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
 
+.image-4:hover .a{
+    opacity: 0;
+}
+.image-4:hover .b{
+    opacity:1;
+}
+.image-5{
+    grid-area: image-5;
+    max-width: 100%;
+    rotate: 180deg;
+    margin-top: 0;
+    padding: 25px 25px 25px 25px;
+    
+}
+
+.illu-text {
+    grid-area: illu;;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding-left: 20px;
+    padding-bottom: 80px;
+}
+
+.typo-text {
+    grid-area: typo;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding-bottom: 80px;
+}
+
+.paris-text{
+    grid-area: paris;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    padding-right: 20px;
+    padding-bottom: 80px;
+}
