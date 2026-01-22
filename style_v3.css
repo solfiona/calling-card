@@ -40,18 +40,17 @@ p{
          ". bio bio bio ."
          "titel-1 . titel-2 . titel-3"
          "illu . typo . paris"
-         "titel-11 titel-11 titel-11 titel-11 titel-11"
+         "titel-11 . . . . "
          "image-1 image-1 . image-2 image-2"
          "image-3 image-3 image-3 image-4 image-4"
-         ". . . . titel-22"
+         ". . titel-22 . . "
          "image-two image-two image-one image-one image-one"
          "image-three image-three image-four image-four image-four"
             
-         "titel-33 . . . ."
+         ". . . . titel-33"
          "image-vier image-vier image-vier image-zwei image-zwei"
-         "paris-zoom paris-zoom paris-zoom . ."
-         "image-drei image-drei . image-eins image-eins";
-}
+         "image-eins image-eins image-eins image-drei image-drei";
+        }
 
 
 .klein-1{
@@ -93,10 +92,7 @@ p{
     grid-area: name;
     color: white;
     text-align: center;
-
-    
 }
-
  .name h1 {
     color:white;
     font-family:sans-serif;
@@ -121,15 +117,17 @@ p{
     font-size: 20px;
     padding-left: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
-.titel-11{
+.titel-11 {
     grid-area: titel-11;
     color: white;
     font-family: Arial, Helvetica, 'Times New Roman', serif;
-    padding-left: 20px;
-}
+    font-size: 20px;
+}   
+    
+
 
 .titel-2{
     grid-area: titel-2;
@@ -137,12 +135,13 @@ p{
     font-family: Arial, Helvetica, 'Times New Roman', serif;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 .titel-22{
     grid-area: titel-22;
     color: white;
     font-family: Arial, Helvetica, 'Times New Roman', serif;
+    font-size: 20px;
 }
 
 .titel-3{
@@ -152,27 +151,29 @@ p{
     font-size: 20px;
     padding-right: 20px;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
 .titel-33{
     grid-area: titel-33;
     color: white;
     font-family: Arial, Helvetica, 'Times New Roman', serif;
+    font-size: 20px;
 }
 
 
 .image-1{
     grid-area: image-1;
     width: 100%;
-    padding: 70px;
-    rotate: -155deg;
+    align-self: center;
+    transform: rotate(-155deg) scale(1);
+    transition: transform 0.5s ease; 
 }
 
 .image-1:hover{
-    transform: scale(1.55);
-    transition: transform 0.5s ease;  
+    transform: rotate(-155deg) scale(1.55); 
 }
+
 .image-2{
     grid-area: image-2;
     max-width: 80%;
@@ -184,31 +185,26 @@ p{
 }
 .image-3{
     grid-area: image-3;
-    max-width: 100% ;
-    justify-self: center;
-    /* (horizontal) */
-    align-self: center; 
-    /* (vertikal) */
-    /* padding-right: 25px; */
-    transform: scale(1.3);
+    max-width: 100%;
+    align-self: center;
+    transition: transform 0.5s ease;
+    padding-bottom: 150px;
 }
 
 .image-3:hover{
-    transform: scale(1.55);
-    transition: transform 0.5s ease;  
-    transform: scale(1.5);
+    transform: scale(1.45);
+    
 }
 
 .image-4{
     grid-area: image-4;
-    max-width: 100%;
+    max-width: 80%;
     justify-self: center;
     /* (horizontal) */
     align-self: center; 
     /* (vertikal) */
     padding-right: 25px;
-    
-
+    padding-bottom: 150px;
 }
 
 
@@ -216,10 +212,11 @@ p{
     grid-area: image-one;
     max-width: 100%;
     align-self: center;
+    transition: transform 0.5s ease;  
 }
 .image-one:hover{
     transform: scale(1.45);
-    transition: transform 0.5s ease;  
+    
 }
 
 
@@ -232,6 +229,7 @@ p{
 .image-three {
     grid-area: image-three;
     max-width: 100%;
+    padding-bottom: 150px;
 }
 
 
@@ -241,6 +239,7 @@ p{
     position: relative;
     justify-self: center;
     align-self: center;
+    padding-bottom: 150px;
 }
 
 .image-four img{
@@ -274,11 +273,17 @@ p{
 
 .image-eins {
     grid-area: image-eins;
-    width: 100%;
- }
+    max-width: 80%;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+}
+
+
 .image-zwei {
     grid-area: image-zwei;
     width: 100%;
+    align-self: center;
 }
 
 
@@ -287,19 +292,47 @@ p{
     width: 100%;
 }
 
-.paris_zoom {
-    grid-area: paris-zoom;
-    max-width: 80%;
-}
+
  
 .image-vier {
     grid-area: image-vier;
-    max-width: 100%;
     position: relative;
-    ;
+    max-width: 90%;
+    margin: 0 auto;  
 }
 
+.image-vier img{
+    transition: opacity 0.3s ease;
+}
+ 
+.image-vier .d{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    text-align: center;
+    padding: 30px;
+    opacity: 0;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.image-vier p {
+    color: white;
+    
+}
+ 
+
+.image-vier:hover .c{
+    opacity: 0;
+}
+
+.image-vier:hover .d{
+    opacity: 1;
+}
 
 /* .image-two {
     grid-area: image-two;
@@ -307,21 +340,7 @@ p{
     align-self: center;
 } */
  
-.image-vier img{
-    transition: opacity 0.3s ease;
-}
- 
-.image-vier .d{
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-}
- 
 
-.image-vier:hover .c{
-    opacity: 1;
-}
 
 .illu-text {
     grid-area: illu;;
@@ -329,7 +348,7 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
     padding-left: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
 }
 
 .typo-text {
@@ -337,7 +356,7 @@ p{
     color: white;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
 }
 .paris-text{
     grid-area: paris;
@@ -345,7 +364,7 @@ p{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
     padding-right: 20px;
-    padding-bottom: 80px;
+    padding-bottom: 150px;
 }
 
 
