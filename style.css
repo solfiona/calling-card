@@ -12,7 +12,7 @@ body {
 }
 
 
-p{
+.bio p {
     animation-duration: 3s;
     animation-name: slide-in;
 }
@@ -277,8 +277,32 @@ p{
     position: relative;
     justify-self: center;
     align-self: center;
+    rotate: -1.15deg;
 }
 
+.image-eins img{
+    transition: opacity 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-eins .f{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: 0 auto;
+    rotate: 1.25deg;
+}
+
+.image-eins:hover .e{
+    opacity: 0;
+}
+
+.image-eins:hover .f{
+    opacity: 1;
+}
 
 .image-zwei {
     grid-area: image-zwei;
@@ -297,7 +321,7 @@ p{
 .image-vier {
     grid-area: image-vier;
     position: relative;
-    max-width: 90%;
+    max-width: 80%;
     margin: 0 auto;  
 }
 
